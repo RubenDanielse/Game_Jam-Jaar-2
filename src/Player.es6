@@ -1,8 +1,8 @@
 class Player {
     constructor() {
         this.player = {
-            xPos: 300,
-            yPos: 300,
+            xPos: 10,
+            yPos: 700,
             height: 10,
             width: 10,
             hp: 3,
@@ -11,12 +11,6 @@ class Player {
     }
     move(movement) {
 
-
-        if(movement.down && this.player.yPos >= window.innerHeight - 10) {
-            this.player.yPos == window.innerHeight;
-        } else if(movement.down){
-            this.player.yPos += 10;
-        }
 
         if(movement.up && this.player.yPos <= window.innerHeight - window.innerHeight) {
             this.player.yPos == 0;
