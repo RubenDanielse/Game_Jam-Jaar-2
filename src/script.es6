@@ -4,7 +4,6 @@ const Particles = require("./particles.es6");
 const KeyView = require("./KeyView.es6");
 const CanvasView = require("./CanvasView.es6");
 
-
 class Controller {
     constructor() {
         this.player = new Player();
@@ -23,7 +22,6 @@ class Controller {
         this.canvas.drawPlayer(this.player.pos1);
 
         this.canvas.drawEnemy(this.enemy.pos2);
-
 
 
         if (this.particles.length <= 25) {
@@ -46,8 +44,6 @@ class Controller {
             return part.particle.dead == false;
         });
 
-
-
         window.requestAnimationFrame(() => {
             this.loop();
         });
@@ -59,3 +55,5 @@ control.loop();
 
 setInterval(() => {
 }, 3000);
+
+//test test
