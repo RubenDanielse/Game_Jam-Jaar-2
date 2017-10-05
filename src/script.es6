@@ -3,7 +3,6 @@ const Enemy = require("./Enemy.es6");
 const Particles = require("./particles.es6");
 const KeyView = require("./KeyView.es6");
 const CanvasView = require("./CanvasView.es6");
-const HighScore = require("./HighScore");
 
 
 class Controller {
@@ -13,7 +12,6 @@ class Controller {
         this.particles = [];
         this.key = new KeyView();
         this.canvas = new CanvasView();
-        this.score = new HighScore();
     }
     loop() {
         this.canvas.clear();
@@ -41,7 +39,6 @@ class Controller {
             let dead = this.player.collision(part.pos3);
             if (dead) {
                 part.particle.dead = true;
-                this.score + 1;
             }
         });
 

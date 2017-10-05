@@ -10,17 +10,7 @@ class Player {
         };
     }
     move(movement) {
-        if (movement.left && this.player.xPos <= window.innerWidth - window.innerWidth) {
-            this.player.xPos == 0;
-        } else if (movement.left) {
-            this.player.xPos -= 10;
-        }
 
-        if(movement.right && this.player.xPos >= window.innerWidth - 10) {
-            this.player.xPos == window.innerWidth;
-        } else if (movement.right) {
-            this.player.xPos += 10;
-        }
 
         if(movement.down && this.player.yPos >= window.innerHeight - 10) {
             this.player.yPos == window.innerHeight;
@@ -44,10 +34,10 @@ class Player {
             && (particle.y + particle.height >= this.player.yPos)
             && (particle.y <= this.player.yPos + this.player.height)
         ) {
-            console.log("hi");
-            this.player.hp = this.player.hp - 1;
-            this.player.color = "rgba(200,0,0,1)";
-            setTimeout(()=>{ this.player.color = "rgba(0,254,0,1)";}, 100);
+           console.log("hi");
+           this.player.hp = this.player.hp - 1;
+           this.player.color = "rgba(200,0,0,1)";
+           setTimeout(()=>{ this.player.color = "rgba(0,254,0,1)";}, 100);
             return true;
         }
         return false;
